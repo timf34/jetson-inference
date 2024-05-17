@@ -63,10 +63,4 @@ fi
 # install cython for if numpy gets built by later packages
 pip3 install --no-cache-dir --verbose --upgrade Cython
 
-# download/install models and PyTorch
-if [ $BUILD_CONTAINER = "NO" ]; then
-	#./download-models.sh $BUILD_INTERACTIVE
-	./install-pytorch.sh $BUILD_INTERACTIVE
-fi
-
 echo "[Pre-build]  Finished CMakePreBuild script"
